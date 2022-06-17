@@ -1,0 +1,106 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.intro,
+.mid-panel,
+.last-panel {
+    padding: 40px;
+}
+
+nav {
+    background: url(huntington.jpg);
+    padding: 0%;
+    padding-top: 10px;
+    color: white;
+    height: 200px;
+}
+
+.logo {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    justify-content: center;
+    column-gap: 10px;
+}
+
+.logo img {
+    grid-area: 1/ 1/ span 2/ span 1;
+    width: 100px;
+}
+
+.nav-btn {
+    width: 100%;
+    position: absolute;
+    top: 170px;
+}
+
+nav button:first-of-type {
+    width: 80%;
+}
+
+nav button:last-of-type {
+    width: 19%;
+}
+
+nav button:last-of-type,
+nav button:first-of-type {
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+}
+
+/* mid panel */
+
+.mid-panel,
+.side-two {
+    background-color: rgba(138, 188, 159, 0.5);
+    background-image: url(contours-opaque.png), url(gridlines-opaque.png), url(bamboo.png);
+}
+
+.pre-footer {
+    background-color: #3e5d67;
+    background-image: url(contours.png), url(gridlines.png), url(noise.png), url(koi.jpg);
+    height: 180px;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 28px;
+    padding: 20px 150px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+footer {
+    height: 100px;
+    background-color: #134347;
+}
+
+/* side bar */
+
+.side-one {
+    display: grid;
+    grid-template-columns: repeat(2, 45%);
+    grid-template-rows: repeat(4, auto);
+    justify-content: center;
+}
+
+.side-one div {
+    border-bottom: 1px solid black;
+}
+
+.side-two ul {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-row: repeat(5, auto);
+}
+
+.side-two li {
+    list-style: none;
+    padding: 15px;
+    border-bottom: 1px solid black;
+}
+
+.side-two li:last-of-type {
+    border-bottom: none;
+}
