@@ -6,7 +6,56 @@ body {
 .intro,
 .mid-panel,
 .last-panel {
-    padding: 40px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-items: center;
+
+}
+
+@media only screen and (min-width: 768px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: 70% 30%;
+        grid-template-rows: repeat(6, auto);
+        grid-template-areas:
+            "nav nav"
+            "intro ."
+            "mid-panel mid-panel"
+            "last-panel ."
+            "footer footer";
+    }
+
+    /* Nav */
+    nav {
+        grid-area: nav;
+        position: relative;
+    }
+
+    .intro {
+        grid-area: intro;
+    }
+
+    .mid-panel {
+        grid-area: mid-panel;
+    }
+
+    .mid-panel p {
+        width: 70%;
+    }
+
+    .last-panel {
+        grid-area: last-panel;
+    }
+
+    .pre-footer {
+        grid-area: pre-footer;
+    }
+
+    .footer {
+        grid-area: footer;
+    }
 }
 
 nav {
@@ -51,12 +100,34 @@ nav button:first-of-type {
     border: none;
 }
 
+@media only screen and (min-width: 768px) {
+    .nav-btn {
+        position: static;
+        width: auto;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between !important;
+        padding: 15px;
+
+    }
+
+    nav button {
+        height: 50px;
+        width: 150px !important;
+    }
+}
+
 /* mid panel */
 
 .mid-panel,
 .side-two {
     background-color: rgba(138, 188, 159, 0.5);
     background-image: url(contours-opaque.png), url(gridlines-opaque.png), url(bamboo.png);
+    background-attachment: fixed;
 }
 
 .pre-footer {
@@ -80,7 +151,7 @@ footer {
 
 .side-one {
     display: grid;
-    grid-template-columns: repeat(2, 45%);
+    grid-template-columns: repeat(2, 40%);
     grid-template-rows: repeat(4, auto);
     justify-content: center;
 }
@@ -103,4 +174,22 @@ footer {
 
 .side-two li:last-of-type {
     border-bottom: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .sidebar {
+        position: absolute;
+        top: 220px;
+        right: 0;
+        padding: 20px;
+    }
+
+    .side-one,
+    .side-two ul {
+        grid-template-columns: 1fr;
+    }
+
+    .side-two {
+        background: none;
+    }
 }
